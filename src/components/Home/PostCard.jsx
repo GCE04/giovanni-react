@@ -1,17 +1,19 @@
-import { useState } from "react";
+import { Link } from "react-router-dom";
+import Button from '@mui/material/Button';
+import Box from '@mui/material/Box';
 
 export default function PostCard({ post }) {
-  const [showContent, setShowContent] = useState(false);
-
-  const handleClick = () => {
-    setShowContent(!showContent);
-  };
-
   return (
     <div>
-      <button onClick={handleClick}>Mostra content</button>
-      <h2>{post.name}</h2>
-      {showContent && <p>{post.content}</p>}
+      <Link
+        to={{pathname: post.name}}
+        state={{ content: post.content, post: post}}
+        style={{ textDecoration: 'none' }}
+      >
+        <Box textAlign='center' padding='8px'>
+          <Button variant="contained"> {post.name} </Button>
+        </Box>
+      </Link>
     </div>
   );
 }
