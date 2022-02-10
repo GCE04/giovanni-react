@@ -1,21 +1,16 @@
-import App from '../App';
 import PostScreen from '../screens/PostScreen';
 import React from 'react';
+import HomeScreen from "../screens/HomeScreen";
 import {
-  BrowserRouter,
   Routes,
   Route
 } from "react-router-dom";
 
 export default function Navigator() {
     return (
-      <React.StrictMode>
-        <BrowserRouter>
         <Routes>
-          <Route path="/" element={<App />} />
+          <Route path="/" element={<HomeScreen />} />
           <Route path=":name" element={<PostScreen />} />
         </Routes>
-        </BrowserRouter>
-      </React.StrictMode>
     );
   }

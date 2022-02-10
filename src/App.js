@@ -1,9 +1,9 @@
-import HomeScreen from "./screens/HomeScreen";
+import Navigator from "./navigation"
 
 function App() {
   return (
     <div>
-      <HomeScreen />
+      <Navigator />
     </div>
   );
 }

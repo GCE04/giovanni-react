@@ -3,6 +3,7 @@ import Card from '@mui/material/Card';
 import CardMedia from '@mui/material/CardMedia';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
+import image from '../assets/images/selfie.jpg'
 
 export default function PostScreen() {
 
@@ -20,7 +21,7 @@ export default function PostScreen() {
           <CardMedia
             component="img"
             height="195"
-            image={"/images/" + location.state.post.img}
+            image={image}
             alt="Test img"
           />
           <br></br>
