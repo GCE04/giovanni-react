@@ -6,12 +6,12 @@ export default function PostCard({ post }) {
   return (
     <div key={post.id}>
       <Link
-        to={{ pathname: post.name }}
-        state={{ content: post.content, post: post }}
+        to={{ pathname: "Post " + post.id }}
+        state={{ content: post.body, post: post }}
         style={{ textDecoration: "none" }}
       >
         <Box textAlign="center" padding="8px">
-          <Button variant="contained"> {post.name} </Button>
+          <Button variant="contained"> {"Post " + post.id} </Button>
         </Box>
       </Link>
     </div>
